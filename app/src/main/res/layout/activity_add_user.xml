@@ -8,10 +8,10 @@
 
     <RadioGroup
         android:id="@+id/rdEditDegree"
-        android:layout_width="250dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEditEmail">
 
@@ -67,7 +67,7 @@
         android:id="@+id/txtEditFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Etunimi"
         android:inputType="textPersonName"
@@ -124,5 +124,61 @@
         app:layout_constraintBottom_toTopOf="@+id/rdImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="13dp"
+        android:text="OPISKELUALA"
+        app:layout_constraintBottom_toTopOf="@+id/rdEditDegree"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="13dp"
+        android:text="Suoritetut tutkinnot"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@+id/rgCompletedDegrees"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgCompletedDegrees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdEditDegree"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditEmail">
+
+        <CheckBox
+            android:id="@+id/btnKandi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kandidaatin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/btnDippa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diplomi-insinöörin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/btnTohtori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tekniikan tohtorin tutkinto" />
+
+        <CheckBox
+            android:id="@+id/btnUimamaisteri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uimamaisteri" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

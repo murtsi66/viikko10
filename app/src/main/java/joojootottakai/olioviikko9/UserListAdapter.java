@@ -29,11 +29,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User user = users.get(position);
-        holder.txtFirstName.setText(user.getFirstName());
-        holder.txtLastName.setText(user.getLastName());
+        holder.txtName.setText(users.get(position).getFirstName() + " " + users.get(position).getLastName());
         holder.txtEmail.setText(user.getEmail());
         holder.txtDegree.setText(user.getDegreeProgram());
         holder.userPhoto.setImageResource(user.getImage());
+        holder.txtCompletedDegrees.setText(users.get(position).getDegrees());
     }
 
     @Override

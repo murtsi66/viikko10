@@ -2,20 +2,24 @@ package joojootottakai.olioviikko9;
 
 import android.widget.Spinner;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     public String firstName;
     public String lastName;
     public String email;
     public String degreeProgram;
+    public String degrees;
 
     protected int image;
 
-    public User(String firstName, String lastName, String email, String degreeProgram, int image) {
+    public User(String firstName, String lastName, String email, String degreeProgram, int image, String degrees) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.degreeProgram = degreeProgram;
         this.image = image;
+        this.degrees = degrees;
     }
 
     public String getFirstName() {
@@ -36,5 +40,9 @@ public class User {
 
     public int getImage() {
         return image;
+    }
+
+    public String getDegrees() {
+        return degrees;
     }
 }
